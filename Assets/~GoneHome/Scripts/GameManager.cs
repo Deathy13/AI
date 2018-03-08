@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-namespace DoYouKnowTheWay
+namespace GoneHome
 {
     public class GameManager : MonoBehaviour
     {

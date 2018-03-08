@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-namespace DoYouKnowTheWay
+namespace GoneHome
 {
     public class Goal : MonoBehaviour
     {
