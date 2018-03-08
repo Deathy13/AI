@@ -10,7 +10,7 @@ namespace GoneHome
         public float movementSpeed = 10f;
         private Rigidbody rigid;
         private Vector3 spawnPoint;
-
+        public GameObject deathParticles;
 
 
 
@@ -41,6 +41,7 @@ namespace GoneHome
         }
         public void Reset()
         {
+            Instantiate(deathParticles, transform.position, transform.rotation);
             transform.position = spawnPoint;
             rigid.velocity = Vector3.zero;
         }
