@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace YouKnowTheWay
+namespace GoneHome
 {
     public class PatrolEnemy : MonoBehaviour
     {
@@ -12,11 +12,14 @@ namespace YouKnowTheWay
         private Transform[] waypoint;
         private int currentIndex = 0;
 
-
+        private Vector3 spawnPoint;
+        private Quaternion spawnRotation;
 
         // Use this for initialization
         void Start()
         {
+            spawnPoint = transform.position;
+            spawnRotation = transform.rotation;
             int length = waypointGroup.childCount;
             waypoint = new Transform[length];
             //// for (initialization;  condition; iteration)
@@ -53,6 +56,11 @@ namespace YouKnowTheWay
                 currentIndex = 0;
             }
 
+        }
+        public void Reset()
+        {
+            transform.position = spawnPoint;
+            transform.rotation = spawnRotation;
         }
     }
 }
